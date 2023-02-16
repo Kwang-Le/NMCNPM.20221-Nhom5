@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="Lib/jcalendar-1.2.2.jar"/>
+	<classpathentry kind="lib" path="Lib/poi-4.1.1.jar"/>
+	<classpathentry kind="lib" path="Lib/poi-bin-4.1.1-20191023.zip"/>
+	<classpathentry kind="lib" path="Lib/poi-examples-4.1.1.jar"/>
+	<classpathentry kind="lib" path="Lib/poi-excelant-4.1.1.jar"/>
+	<classpathentry kind="lib" path="Lib/poi-ooxml-4.1.1.jar"/>
+	<classpathentry kind="lib" path="Lib/poi-ooxml-schemas-4.1.1.jar"/>
+	<classpathentry kind="lib" path="Lib/poi-scratchpad-4.1.1.jar"/>
+	<classpathentry kind="lib" path="Lib/mysql-connector-j-8.0.32.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
