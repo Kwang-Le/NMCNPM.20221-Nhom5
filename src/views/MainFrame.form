@@ -81,9 +81,9 @@
                           <Component id="NhanKhauBtn" alignment="1" max="32767" attributes="0"/>
                           <Component id="HoKhauBtn" alignment="0" max="32767" attributes="0"/>
                           <Component id="ThongKeBtn" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jPanel2" alignment="0" pref="224" max="32767" attributes="0"/>
-                          <Component id="jPanel6" alignment="0" pref="224" max="32767" attributes="0"/>
-                          <Component id="jPanel7" alignment="0" pref="224" max="32767" attributes="0"/>
+                          <Component id="jPanel2" alignment="0" pref="237" max="32767" attributes="0"/>
+                          <Component id="jPanel6" alignment="0" pref="237" max="32767" attributes="0"/>
+                          <Component id="jPanel7" alignment="0" pref="237" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -151,7 +151,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/app.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    Trang ch&#x1ee7;"/>
+                    <Property name="text" type="java.lang.String" value="   Trang ch&#x1ee7;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -198,7 +198,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/multiple-users-silhouette.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    Nh&#xe2;n kh&#x1ea9;u"/>
+                    <Property name="text" type="java.lang.String" value="   Nh&#xe2;n kh&#x1ea9;u"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -242,7 +242,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/home.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    H&#x1ed9; kh&#x1ea9;u"/>
+                    <Property name="text" type="java.lang.String" value="   H&#x1ed9; kh&#x1ea9;u"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -286,7 +286,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/increasing-stocks-graphic.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    Th&#x1ed1;ng k&#xea;"/>
+                    <Property name="text" type="java.lang.String" value="   Th&#x1ed1;ng k&#xea;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -326,6 +326,9 @@
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/Icons/icons8-male-user-48.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="QU&#x1ea2;N L&#xdd; COVID-19"/>
                   </Properties>
@@ -374,7 +377,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/icons8-edit-property-32.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Khai b&#xe1;o d&#x1ecb;ch t&#x1ec5;"/>
+                    <Property name="text" type="java.lang.String" value="   Khai b&#xe1;o d&#x1ecb;ch t&#x1ec5;"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -394,7 +397,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel6" pref="212" max="32767" attributes="0"/>
+                          <Component id="jLabel6" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -421,7 +424,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/icons8-antivirus-50.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    Test COVID-19"/>
+                    <Property name="text" type="java.lang.String" value="   Test COVID-19"/>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -441,7 +444,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel7" pref="212" max="32767" attributes="0"/>
+                          <Component id="jLabel7" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -468,7 +471,7 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/Icons/icons8-hospital-3-50.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="    C&#xe1;ch ly"/>
+                    <Property name="text" type="java.lang.String" value="   C&#xe1;ch ly"/>
                   </Properties>
                 </Component>
               </SubComponents>
