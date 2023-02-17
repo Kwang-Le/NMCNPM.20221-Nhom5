@@ -45,11 +45,13 @@ public class HomePagePanel extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         nhanKhauTamVangLb = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(167, 199, 231));
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/network.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-conference-64.png"))); // NOI18N
+
+        jPanel2.setBackground(new java.awt.Color(167, 199, 231));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -62,11 +64,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nhân khẩu có trên địa bàn:");
+        jLabel2.setText("Nhân khẩu có trên địa bàn");
 
-        tongNhanKhauLb.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        tongNhanKhauLb.setFont(new java.awt.Font("Open Sans", 1, 42)); // NOI18N
         tongNhanKhauLb.setForeground(new java.awt.Color(255, 255, 255));
         tongNhanKhauLb.setText("1000");
 
@@ -97,9 +99,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel3.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel3.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/house.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-home-64.png"))); // NOI18N
+
+        jPanel4.setBackground(new java.awt.Color(167, 199, 231));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -112,11 +116,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Hộ khẩu có trên địa bàn:");
+        jLabel5.setText("Hộ khẩu có trên địa bàn");
 
-        tongHoKhauLb.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        tongHoKhauLb.setFont(new java.awt.Font("Open Sans", 1, 42)); // NOI18N
         tongHoKhauLb.setForeground(new java.awt.Color(255, 255, 255));
         tongHoKhauLb.setText("1000");
 
@@ -133,7 +137,7 @@ public class HomePagePanel extends javax.swing.JPanel {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(tongHoKhauLb))
-                .addContainerGap(519, Short.MAX_VALUE))
+                .addContainerGap(525, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,9 +151,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel5.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/check-in.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-hotel-check-in-100.png"))); // NOI18N
+
+        jPanel6.setBackground(new java.awt.Color(167, 199, 231));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -162,11 +168,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Nhân khẩu tạm trú:");
+        jLabel8.setText("Nhân khẩu tạm trú");
 
-        nhanKhauTamTruLb.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        nhanKhauTamTruLb.setFont(new java.awt.Font("Open Sans", 1, 42)); // NOI18N
         nhanKhauTamTruLb.setForeground(new java.awt.Color(255, 255, 255));
         nhanKhauTamTruLb.setText("1000");
 
@@ -183,7 +189,7 @@ public class HomePagePanel extends javax.swing.JPanel {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
                     .addComponent(nhanKhauTamTruLb))
-                .addContainerGap(137, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,9 +203,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel7.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel7.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/hotel.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-leave-house-100.png"))); // NOI18N
+
+        jPanel8.setBackground(new java.awt.Color(167, 199, 231));
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -212,11 +220,11 @@ public class HomePagePanel extends javax.swing.JPanel {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Nhân khẩu tạm vắng:");
+        jLabel11.setText("Nhân khẩu tạm vắng");
 
-        nhanKhauTamVangLb.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
+        nhanKhauTamVangLb.setFont(new java.awt.Font("Open Sans", 1, 42)); // NOI18N
         nhanKhauTamVangLb.setForeground(new java.awt.Color(255, 255, 255));
         nhanKhauTamVangLb.setText("1000");
 
