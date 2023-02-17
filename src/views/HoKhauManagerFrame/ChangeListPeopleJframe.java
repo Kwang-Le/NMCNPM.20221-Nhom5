@@ -76,9 +76,11 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 
         jTextField1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        PeopleTableJpn.setBackground(new java.awt.Color(167, 199, 231));
 
         javax.swing.GroupLayout PeopleTableJpnLayout = new javax.swing.GroupLayout(PeopleTableJpn);
         PeopleTableJpn.setLayout(PeopleTableJpnLayout);
@@ -91,6 +93,8 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        MemTableJpn.setBackground(new java.awt.Color(167, 199, 231));
+
         javax.swing.GroupLayout MemTableJpnLayout = new javax.swing.GroupLayout(MemTableJpn);
         MemTableJpn.setLayout(MemTableJpnLayout);
         MemTableJpnLayout.setHorizontalGroup(
@@ -99,16 +103,22 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
         );
         MemTableJpnLayout.setVerticalGroup(
             MemTableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 305, Short.MAX_VALUE)
+            .addGap(0, 303, Short.MAX_VALUE)
         );
 
-        addBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        addBtn.setBackground(new java.awt.Color(130, 180, 203));
+        addBtn.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        addBtn.setForeground(new java.awt.Color(255, 255, 255));
         addBtn.setText(">>");
 
-        removeBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        removeBtn.setBackground(new java.awt.Color(130, 180, 203));
+        removeBtn.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        removeBtn.setForeground(new java.awt.Color(255, 255, 255));
         removeBtn.setText("<<");
 
-        saveBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        saveBtn.setBackground(new java.awt.Color(130, 180, 203));
+        saveBtn.setFont(new java.awt.Font("Montserrat", 0, 18)); // NOI18N
+        saveBtn.setForeground(new java.awt.Color(255, 255, 255));
         saveBtn.setText("Lưu thay đổi");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -154,7 +164,7 @@ public class ChangeListPeopleJframe extends javax.swing.JFrame {
                         .addComponent(addBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(removeBtn)
-                        .addGap(0, 244, Short.MAX_VALUE)))
+                        .addGap(0, 231, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 

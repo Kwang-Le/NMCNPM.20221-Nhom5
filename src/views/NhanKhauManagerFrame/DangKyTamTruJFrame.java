@@ -103,14 +103,17 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 
         soCmtJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Số CMT:");
 
-        checkBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        checkBtn.setBackground(new java.awt.Color(130, 180, 203));
+        checkBtn.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        checkBtn.setForeground(new java.awt.Color(255, 255, 255));
         checkBtn.setText("Check");
         checkBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,7 +125,8 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("(*)");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Mã giấy tạm trú:");
 
         maGiayTamTruJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -149,12 +153,14 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("(*)");
 
-        jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Số điện thoại:");
 
         tuNgayDc.setEnabled(false);
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Từ ngày:");
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -167,7 +173,8 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
 
         denNgayDc.setEnabled(false);
 
-        jLabel10.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Đến ngày:");
 
         lyDoTar.setColumns(20);
@@ -175,9 +182,13 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
         lyDoTar.setEnabled(false);
         jScrollPane1.setViewportView(lyDoTar);
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Lý do:");
 
+        acceptBtn.setBackground(new java.awt.Color(130, 180, 203));
+        acceptBtn.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        acceptBtn.setForeground(new java.awt.Color(255, 255, 255));
         acceptBtn.setText("Xác nhận");
         acceptBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,6 +196,9 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setBackground(new java.awt.Color(130, 180, 203));
+        cancelBtn.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        cancelBtn.setForeground(new java.awt.Color(255, 255, 255));
         cancelBtn.setText("Hủy");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,7 +226,7 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
                         .addComponent(checkBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(availableIcon)
-                        .addContainerGap(21, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -237,8 +251,8 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(acceptBtn)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -276,7 +290,7 @@ public class DangKyTamTruJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(acceptBtn)
                     .addComponent(cancelBtn))

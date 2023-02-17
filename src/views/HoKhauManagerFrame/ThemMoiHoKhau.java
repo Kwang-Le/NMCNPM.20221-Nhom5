@@ -98,9 +98,10 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(167, 199, 231));
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Mã hộ khẩu:");
 
         maHoKhauJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -114,7 +115,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("(*)");
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Mã khu vực:");
 
         maKhuVucJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -128,7 +130,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("(*)");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Địa chỉ:");
 
         diaChiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -142,7 +145,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("(*)");
 
-        jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Chủ hộ:");
 
         tenChuHoJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -157,6 +161,9 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         jLabel8.setText("(*)");
 
+        selectBtn.setBackground(new java.awt.Color(130, 180, 203));
+        selectBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        selectBtn.setForeground(new java.awt.Color(255, 255, 255));
         selectBtn.setText("Chọn...");
         selectBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +171,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Ngày sinh chủ hộ:");
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -179,7 +187,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Số CMT chủ hộ:");
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -194,8 +203,8 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thành viên của hộ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 14))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(167, 199, 231));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thành viên của hộ", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 22), new java.awt.Color(59, 61, 161))); // NOI18N
 
         javax.swing.GroupLayout memTableJpnLayout = new javax.swing.GroupLayout(memTableJpn);
         memTableJpn.setLayout(memTableJpnLayout);
@@ -208,6 +217,9 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             .addGap(0, 223, Short.MAX_VALUE)
         );
 
+        editBtn.setBackground(new java.awt.Color(130, 180, 203));
+        editBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        editBtn.setForeground(new java.awt.Color(255, 255, 255));
         editBtn.setText("Sửa");
         editBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,6 +246,9 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
                 .addGap(37, 37, 37))
         );
 
+        saveBtn.setBackground(new java.awt.Color(130, 180, 203));
+        saveBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        saveBtn.setForeground(new java.awt.Color(255, 255, 255));
         saveBtn.setText("Lưu");
         saveBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -241,6 +256,9 @@ public class ThemMoiHoKhau extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setBackground(new java.awt.Color(130, 180, 203));
+        cancelBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        cancelBtn.setForeground(new java.awt.Color(255, 255, 255));
         cancelBtn.setText("Hủy");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

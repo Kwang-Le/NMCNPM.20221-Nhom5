@@ -129,8 +129,11 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(167, 199, 231));
 
+        acceptBtn.setBackground(new java.awt.Color(130, 180, 203));
+        acceptBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        acceptBtn.setForeground(new java.awt.Color(255, 255, 255));
         acceptBtn.setText("Xác nhận");
         acceptBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,6 +141,9 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
             }
         });
 
+        CancelBtn.setBackground(new java.awt.Color(130, 180, 203));
+        CancelBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        CancelBtn.setForeground(new java.awt.Color(255, 255, 255));
         CancelBtn.setText("Hủy");
         CancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,14 +158,17 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Số CMT/ CCCD:");
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("(*)");
 
-        checkBtn.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        checkBtn.setBackground(new java.awt.Color(130, 180, 203));
+        checkBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        checkBtn.setForeground(new java.awt.Color(255, 255, 255));
         checkBtn.setText("Check");
         checkBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,7 +179,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         availableIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/checked.png"))); // NOI18N
         availableIcon.setEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Mã giấy tạm vắng:");
 
         maGiayTamVangJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -185,7 +195,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("(*)");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Nơi tạm trú:");
 
         noiTamTruJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -206,10 +217,12 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("(*)");
 
-        jLabel8.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Từ ngày:");
 
-        jLabel9.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Đến ngày:");
 
         denNgayJdc.setEnabled(false);
@@ -224,7 +237,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
         lyDoJta.setEnabled(false);
         jScrollPane1.setViewportView(lyDoJta);
 
-        jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Lý do:");
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -278,8 +292,8 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(CancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(acceptBtn)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -318,7 +332,7 @@ public class DangKyTamVangJFrame extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(CancelBtn)
                     .addComponent(acceptBtn))

@@ -82,9 +82,13 @@ public class ChoosePeople extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(167, 199, 231));
+        jPanel1.setForeground(new java.awt.Color(130, 180, 203));
 
         searchJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        tableJpn.setBackground(new java.awt.Color(167, 199, 231));
+        tableJpn.setForeground(new java.awt.Color(130, 180, 203));
 
         javax.swing.GroupLayout tableJpnLayout = new javax.swing.GroupLayout(tableJpn);
         tableJpn.setLayout(tableJpnLayout);
@@ -94,9 +98,12 @@ public class ChoosePeople extends javax.swing.JFrame {
         );
         tableJpnLayout.setVerticalGroup(
             tableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 272, Short.MAX_VALUE)
+            .addGap(0, 269, Short.MAX_VALUE)
         );
 
+        confirmBtn.setBackground(new java.awt.Color(130, 180, 203));
+        confirmBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        confirmBtn.setForeground(new java.awt.Color(255, 255, 255));
         confirmBtn.setText("Xác nhận");
         confirmBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +111,9 @@ public class ChoosePeople extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setBackground(new java.awt.Color(130, 180, 203));
+        cancelBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        cancelBtn.setForeground(new java.awt.Color(255, 255, 255));
         cancelBtn.setText("Hủy");
         cancelBtn.setToolTipText("");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -124,11 +134,11 @@ public class ChoosePeople extends javax.swing.JFrame {
                     .addComponent(tableJpn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchJtf, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(selectedJtf, javax.swing.GroupLayout.DEFAULT_SIZE, 436, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
+                        .addComponent(selectedJtf, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(confirmBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(confirmBtn)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -142,7 +152,7 @@ public class ChoosePeople extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(confirmBtn)
                     .addComponent(cancelBtn)
-                    .addComponent(selectedJtf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(selectedJtf))
                 .addContainerGap())
         );
 

@@ -44,10 +44,12 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
         chuyenDiBtn = new javax.swing.JButton();
         tableJpn = new javax.swing.JPanel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(167, 199, 231));
+        setForeground(new java.awt.Color(167, 199, 231));
 
-        themMoiBtn.setBackground(new java.awt.Color(255, 255, 255));
-        themMoiBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        themMoiBtn.setBackground(new java.awt.Color(130, 180, 203));
+        themMoiBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        themMoiBtn.setForeground(new java.awt.Color(255, 255, 255));
         themMoiBtn.setText("Thêm mới");
         themMoiBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,8 +64,9 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
             }
         });
 
-        tachHoKhauBtn.setBackground(new java.awt.Color(255, 255, 255));
-        tachHoKhauBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        tachHoKhauBtn.setBackground(new java.awt.Color(130, 180, 203));
+        tachHoKhauBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        tachHoKhauBtn.setForeground(new java.awt.Color(255, 255, 255));
         tachHoKhauBtn.setText("Tách HK");
         tachHoKhauBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,8 +74,9 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
             }
         });
 
-        chuyenDiBtn.setBackground(new java.awt.Color(255, 255, 255));
-        chuyenDiBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        chuyenDiBtn.setBackground(new java.awt.Color(130, 180, 203));
+        chuyenDiBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        chuyenDiBtn.setForeground(new java.awt.Color(255, 255, 255));
         chuyenDiBtn.setText("Chuyển đi");
         chuyenDiBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,11 +84,14 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
             }
         });
 
+        tableJpn.setBackground(new java.awt.Color(167, 199, 231));
+        tableJpn.setForeground(new java.awt.Color(167, 199, 231));
+
         javax.swing.GroupLayout tableJpnLayout = new javax.swing.GroupLayout(tableJpn);
         tableJpn.setLayout(tableJpnLayout);
         tableJpnLayout.setHorizontalGroup(
             tableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 707, Short.MAX_VALUE)
+            .addGap(0, 671, Short.MAX_VALUE)
         );
         tableJpnLayout.setVerticalGroup(
             tableJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,10 +107,10 @@ public class HoKhauManagePanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(tableJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(tachHoKhauBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(chuyenDiBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(themMoiBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(themMoiBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                            .addComponent(tachHoKhauBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(chuyenDiBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))

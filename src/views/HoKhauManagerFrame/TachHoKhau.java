@@ -100,9 +100,9 @@ public class TachHoKhau extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(167, 199, 231));
 
-        tableTopJpn.setBackground(new java.awt.Color(204, 204, 204));
+        tableTopJpn.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout tableTopJpnLayout = new javax.swing.GroupLayout(tableTopJpn);
         tableTopJpn.setLayout(tableTopJpnLayout);
@@ -112,18 +112,20 @@ public class TachHoKhau extends javax.swing.JFrame {
         );
         tableTopJpnLayout.setVerticalGroup(
             tableTopJpnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Chủ hộ hiện tại");
 
         chuHoHienTaiJtf.setBackground(new java.awt.Color(240, 240, 240));
         chuHoHienTaiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Chủ hộ mới");
 
         chuHoMoiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -141,12 +143,14 @@ public class TachHoKhau extends javax.swing.JFrame {
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
         jLabel12.setText("(*)");
 
-        jLabel13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Mã khu vực");
 
         maKhuVucJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel14.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Địa chỉ");
 
         diaChiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -155,7 +159,8 @@ public class TachHoKhau extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 0, 0));
         jLabel15.setText("(*)");
 
-        jLabel16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Mã hộ khẩu mới");
 
         maHoKhauMoiJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -223,15 +228,17 @@ public class TachHoKhau extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Chọn hộ cần tách");
 
-        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nhập mã hộ khẩu");
 
         searchJtf.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        tableBotJpn.setBackground(new java.awt.Color(204, 204, 204));
+        tableBotJpn.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout tableBotJpnLayout = new javax.swing.GroupLayout(tableBotJpn);
         tableBotJpn.setLayout(tableBotJpnLayout);
@@ -244,10 +251,11 @@ public class TachHoKhau extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Chọn người sang hộ mới");
 
-        tableRigthJtf.setBackground(new java.awt.Color(204, 204, 204));
+        tableRigthJtf.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout tableRigthJtfLayout = new javax.swing.GroupLayout(tableRigthJtf);
         tableRigthJtf.setLayout(tableRigthJtfLayout);
@@ -260,13 +268,23 @@ public class TachHoKhau extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel18.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Open Sans", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Những người ở hộ mới");
 
+        addBtn.setBackground(new java.awt.Color(130, 180, 203));
+        addBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        addBtn.setForeground(new java.awt.Color(255, 255, 255));
         addBtn.setText(">>");
 
+        removeBtn.setBackground(new java.awt.Color(130, 180, 203));
+        removeBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        removeBtn.setForeground(new java.awt.Color(255, 255, 255));
         removeBtn.setText("<<");
 
+        acceptBtn.setBackground(new java.awt.Color(130, 180, 203));
+        acceptBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        acceptBtn.setForeground(new java.awt.Color(255, 255, 255));
         acceptBtn.setText("Xác nhận");
         acceptBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -274,6 +292,9 @@ public class TachHoKhau extends javax.swing.JFrame {
             }
         });
 
+        cancelBtn.setBackground(new java.awt.Color(130, 180, 203));
+        cancelBtn.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
+        cancelBtn.setForeground(new java.awt.Color(255, 255, 255));
         cancelBtn.setText("Hủy");
         cancelBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,10 +318,10 @@ public class TachHoKhau extends javax.swing.JFrame {
                         .addGap(6, 6, 6)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 310, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 371, Short.MAX_VALUE)
                                 .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(acceptBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(4, 4, 4)
+                                .addComponent(acceptBtn)
                                 .addGap(40, 40, 40))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -313,7 +334,7 @@ public class TachHoKhau extends javax.swing.JFrame {
                                             .addComponent(tableRigthJtf, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
                                                 .addComponent(jLabel18)
-                                                .addGap(0, 332, Short.MAX_VALUE))))
+                                                .addGap(0, 336, Short.MAX_VALUE))))
                                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap())))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -332,9 +353,11 @@ public class TachHoKhau extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(tableTopJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)
                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -351,8 +374,7 @@ public class TachHoKhau extends javax.swing.JFrame {
                             .addComponent(acceptBtn))
                         .addGap(19, 19, 19))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(tableTopJpn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(15, 15, 15)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tableBotJpn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
