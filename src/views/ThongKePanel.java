@@ -19,6 +19,11 @@ public class ThongKePanel extends javax.swing.JPanel {
         this.controller = new ThongKePanelController(GenderJcb, StatusJcb, tuTuoiJtf, denTuoiJtf, tuNamJtf, denNamJtf, tableJpn);
         this.controller.setDataTable();
     }
+    public ThongKePanel() {
+        initComponents();
+        this.controller = new ThongKePanelController(GenderJcb, StatusJcb, tuTuoiJtf, denTuoiJtf, tuNamJtf, denNamJtf, tableJpn);
+        this.controller.setDataTable();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

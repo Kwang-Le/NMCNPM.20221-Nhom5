@@ -4,26 +4,21 @@
  */
 package views;
 
-import controllers.QuanLyKhaiBaoController;
-
-import javax.swing.JFrame;
-
+import controllers.QuanLyThongKeCachLyController;
 
 /**
  *
  * @author quang.lethanh
  */
-public class KhaiBaoJPanel extends javax.swing.JPanel {
-    private JFrame parentFrame;
+public class ThongKeCachLyJPanel extends javax.swing.JPanel {
+
     /**
-     * Creates new form KhaiBaoJPanel
+     * Creates new form ThongKeCachLyJPanel
      */
-    public KhaiBaoJPanel(JFrame parentFrame) {
-        this.parentFrame = parentFrame;
+    public ThongKeCachLyJPanel() {
         initComponents();
-        QuanLyKhaiBaoController controller = new QuanLyKhaiBaoController(jpnView, btnAdd, jtfSearch);
-        controller.setDatetoTable4();
-        controller.setEvent();
+        QuanLyThongKeCachLyController controller = new QuanLyThongKeCachLyController(jpnView, jtfSearchMucDo, jtfSearchThoiGian);
+        controller.setDatetoTable2();
     }
 
     /**
@@ -36,16 +31,16 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jpnRoot = new javax.swing.JPanel();
-        btnAdd = new javax.swing.JButton();
-        jtfSearch = new javax.swing.JTextField();
+        jtfSearchMucDo = new javax.swing.JTextField();
         jpnView = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jtfSearchThoiGian = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
         jpnRoot.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnAdd.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        btnAdd.setText("Thêm Mới");
-
-        jtfSearch.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jtfSearchMucDo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jpnView.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -57,33 +52,59 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
         );
         jpnViewLayout.setVerticalGroup(
             jpnViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 397, Short.MAX_VALUE)
+            .addGap(0, 416, Short.MAX_VALUE)
         );
+
+        jLabel1.setText("Mức độ");
+
+        jLabel2.setText("Thời gian bắt đầu");
+
+        jtfSearchThoiGian.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jLabel3.setText("Thống kê cách ly");
 
         javax.swing.GroupLayout jpnRootLayout = new javax.swing.GroupLayout(jpnRoot);
         jpnRoot.setLayout(jpnRootLayout);
         jpnRootLayout.setHorizontalGroup(
             jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnRootLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnRootLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jtfSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
-                        .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jpnRootLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel3)
+                        .addGap(83, 83, 83)
+                        .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpnRootLayout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtfSearchThoiGian, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE))
+                            .addGroup(jpnRootLayout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jtfSearchMucDo, javax.swing.GroupLayout.DEFAULT_SIZE, 74, Short.MAX_VALUE)
+                                .addGap(155, 155, 155)))
+                        .addGap(0, 247, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jpnRootLayout.setVerticalGroup(
             jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpnRootLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpnRootLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jtfSearchMucDo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jpnRootLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3)))
+                .addGap(18, 18, 18)
                 .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAdd)
-                    .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                    .addComponent(jLabel2)
+                    .addComponent(jtfSearchThoiGian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -92,7 +113,7 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 689, Short.MAX_VALUE)
+            .addGap(0, 727, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -101,7 +122,7 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 472, Short.MAX_VALUE)
+            .addGap(0, 532, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -112,9 +133,12 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdd;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jpnRoot;
     private javax.swing.JPanel jpnView;
-    private javax.swing.JTextField jtfSearch;
+    private javax.swing.JTextField jtfSearchMucDo;
+    private javax.swing.JTextField jtfSearchThoiGian;
     // End of variables declaration//GEN-END:variables
 }

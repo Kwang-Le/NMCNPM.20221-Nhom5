@@ -13,12 +13,14 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import views.ThongKeJFrame;
 import views.CachLyJPanel;
 import views.HoKhauManagePanel;
 import views.HomePagePanel;
 import views.KhaiBaoJPanel;
 import views.KiemTraJPanel;
 import views.NhanKhauManagePanel;
+import views.ThongKeJFrame;
 import views.ThongKePanel;
 import views.TimKiemPanel;
 
@@ -27,6 +29,7 @@ import views.TimKiemPanel;
  * @author Hai
  */
 public class MainController {
+
     private JFrame jfrMain;
     private JPanel root;
     private String kindSelected;
@@ -36,50 +39,56 @@ public class MainController {
         this.jfrMain = jfrMain;
         this.root = root;
     }
-    
-    
+
     // set panel for root
     public void setView(JPanel jpnItem, JLabel jlbItem, String kind) {
         this.kindSelected = kind;
         jpnItem.setBackground(new Color(0));
         jlbItem.setBackground(new Color(0));
-        JPanel view = new  JPanel();
-        switch(kind) {
-                case "TrangChu":
-                    view = new HomePagePanel();
-                    break;
-                case "NhanKhau":
-                    view = new NhanKhauManagePanel(this.jfrMain);
-                    break;
-                case "HoKhau":
-                    view = new HoKhauManagePanel(this.jfrMain);
-                    break;
-                case "TimKiem":
-                    view = new TimKiemPanel(this.jfrMain);
-                    break;
-                case "ThongKe":
-                    view = new ThongKePanel(this.jfrMain);
-                    break;
-                case "CachLy":
-                    view = new CachLyJPanel(this.jfrMain);
-                    break;
-                case "KhaiBao":
-                    view = new KhaiBaoJPanel(this.jfrMain);
-                    break;
-                case "KiemTra":
-                    view = new KiemTraJPanel(this.jfrMain);
-                    break;
-                //any more
-                default:
-                    break;
-            }
-        root.removeAll();
-        root.setLayout(new BorderLayout());
-        root.add(view);
-        root.validate();
-        root.repaint();
-    } 
-    
+        JPanel view = new JPanel();
+        switch (kind) {
+            case "TrangChu":
+                view = new HomePagePanel();
+                break;
+            case "NhanKhau":
+                view = new NhanKhauManagePanel(this.jfrMain);
+                break;
+            case "HoKhau":
+                view = new HoKhauManagePanel(this.jfrMain);
+                break;
+            case "TimKiem":
+                view = new TimKiemPanel(this.jfrMain);
+                break;
+            case "ThongKe":
+                ThongKeJFrame frame = new ThongKeJFrame(root, this.jfrMain);
+                frame.setTitle("Thông Tin Cách Ly Covid");
+                frame.setResizable(false);
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
+                break;
+            case "CachLy":
+                view = new CachLyJPanel(this.jfrMain);
+                break;
+            case "KhaiBao":
+                view = new KhaiBaoJPanel(this.jfrMain);
+                break;
+            case "KiemTra":
+                view = new KiemTraJPanel(this.jfrMain);
+                break;
+            //any more
+            default:
+                break;
+        }
+//        if (view == null) {
+            root.removeAll();
+            root.setLayout(new BorderLayout());
+            root.add(view);
+            root.validate();
+            root.repaint();
+//        }
+
+    }
+
     //set animation for menu panel
     public void setEvent(List<DanhMucBean> listDanhMuc) {
         this.listDanhMuc = listDanhMuc;
@@ -87,21 +96,21 @@ public class MainController {
             item.getJlb().addMouseListener(new LabelEvent(this.jfrMain, item.getKind(), item.getJpn(), item.getJlb()));
         });
     }
-    
+
     public void setDefaultColor() {
         this.listDanhMuc.forEach((item) -> {
             if (item.getKind().equals("TrangChu")) {
-                item.getJlb().setBackground(new Color(132,180,203));
-                item.getJpn().setBackground(new Color(132,180,203));
+                item.getJlb().setBackground(new Color(132, 180, 203));
+                item.getJpn().setBackground(new Color(132, 180, 203));
             } else {
-                item.getJlb().setBackground(new Color(132,180,203));
-                item.getJpn().setBackground(new Color(132,180,203));
+                item.getJlb().setBackground(new Color(132, 180, 203));
+                item.getJpn().setBackground(new Color(132, 180, 203));
             }
         });
     }
-    
+
     class LabelEvent implements MouseListener {
-        
+
         private JPanel view;
         private JFrame jfrMain;
         private String kind;
@@ -120,24 +129,29 @@ public class MainController {
             this.jpnItem = jpnItem;
             this.jlbItem = jlbItem;
         }
-        
+
         @Override
         public void mouseClicked(MouseEvent e) {
-            switch(kind) {
+            switch (kind) {
                 case "TrangChu":
                     view = new HomePagePanel();
                     break;
                 case "NhanKhau":
                     view = new NhanKhauManagePanel(this.jfrMain);
                     break;
-                 case "HoKhau":
+                case "HoKhau":
                     view = new HoKhauManagePanel(this.jfrMain);
                     break;
                 case "TimKiem":
                     view = new TimKiemPanel(this.jfrMain);
                     break;
                 case "ThongKe":
-                    view = new ThongKePanel(this.jfrMain);
+                    ThongKeJFrame frame = new ThongKeJFrame(root, this.jfrMain);
+                    frame.setTitle("Thông Tin Cách Ly Covid");
+                    frame.setResizable(false);
+                    frame.setLocationRelativeTo(null);
+                    frame.setVisible(true);
+//                    view = new ThongKePanel(this.jfrMain);
                     break;
                 case "CachLy":
                     view = new CachLyJPanel(this.jfrMain);
@@ -151,16 +165,18 @@ public class MainController {
                 default:
                     break;
             }
+//            if(view == null){
+                root.removeAll();
+                root.setLayout(new BorderLayout());
+                root.add(view);
+                root.validate();
+                root.repaint();
+                setDefaultColor();
+                jlbItem.setBackground(new Color(0));
+                jpnItem.setBackground(new Color(0));
+//            }
             
-            root.removeAll();
-            root.setLayout(new BorderLayout());
-            root.add(view);
-            root.validate();
-            root.repaint();
-            setDefaultColor();
-            jlbItem.setBackground(new Color(0));
-            jpnItem.setBackground(new Color(0));
-        }        
+        }
 
         @Override
         public void mousePressed(MouseEvent e) {
@@ -183,15 +199,14 @@ public class MainController {
         public void mouseExited(MouseEvent e) {
             if (!kind.equalsIgnoreCase(kindSelected)) {
                 if (kind.equals("TrangChu")) {
-                    jlbItem.setBackground(new Color(132,180,203));
-                    jpnItem.setBackground(new Color(132,180,203));
-                } else 
-                {
-                    jlbItem.setBackground(new Color(132,180,203));
-                    jpnItem.setBackground(new Color(132,180,203));
+                    jlbItem.setBackground(new Color(132, 180, 203));
+                    jpnItem.setBackground(new Color(132, 180, 203));
+                } else {
+                    jlbItem.setBackground(new Color(132, 180, 203));
+                    jpnItem.setBackground(new Color(132, 180, 203));
                 }
             }
         }
-        
+
     }
 }

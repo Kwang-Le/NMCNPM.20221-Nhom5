@@ -5,7 +5,7 @@
  */
 package views;
 
-//import controller.QuanLyKiemTraController;
+import controllers.QuanLyKiemTraController;
 
 import javax.swing.JFrame;
 
@@ -22,9 +22,9 @@ public class KiemTraJPanel extends javax.swing.JPanel {
     public KiemTraJPanel(JFrame parentFrame) {
         this.parentFrame = parentFrame;
         initComponents();
-//                QuanLyKiemTraController controller = new QuanLyKiemTraController(jpnView, btnAdd, jtfSearch);
-//        controller.setDatetoTable1();
-//        controller.setEvent();
+        QuanLyKiemTraController controller = new QuanLyKiemTraController(jpnView, btnAdd, jtfSearch);
+        controller.setDatetoTable1();
+        controller.setEvent();
     }
 
     /**
