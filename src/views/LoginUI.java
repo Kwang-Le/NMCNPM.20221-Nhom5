@@ -87,7 +87,9 @@ public class LoginUI extends javax.swing.JFrame {
         txbPasswd.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txbPasswd.setName("txtPasswd"); // NOI18N
 
-        btnLogin.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        btnLogin.setBackground(new java.awt.Color(130, 180, 203));
+        btnLogin.setFont(new java.awt.Font("Open Sans", 1, 14)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("Login");
         btnLogin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

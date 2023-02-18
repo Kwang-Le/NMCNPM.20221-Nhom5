@@ -49,6 +49,8 @@ public class HomePagePanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(132, 180, 203));
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-conference-64.png"))); // NOI18N
 
         jPanel2.setBackground(new java.awt.Color(167, 199, 231));
@@ -101,7 +103,7 @@ public class HomePagePanel extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-home-64.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-home-page-96.png"))); // NOI18N
 
         jPanel4.setBackground(new java.awt.Color(167, 199, 231));
 
@@ -153,7 +155,7 @@ public class HomePagePanel extends javax.swing.JPanel {
 
         jPanel5.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-hotel-check-in-100.png"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-hotel-check-in-64.png"))); // NOI18N
 
         jPanel6.setBackground(new java.awt.Color(167, 199, 231));
 
@@ -205,7 +207,7 @@ public class HomePagePanel extends javax.swing.JPanel {
 
         jPanel7.setBackground(new java.awt.Color(132, 180, 203));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-leave-house-100.png"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-leave-house-64.png"))); // NOI18N
 
         jPanel8.setBackground(new java.awt.Color(167, 199, 231));
 
