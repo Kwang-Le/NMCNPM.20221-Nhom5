@@ -5,7 +5,7 @@
  */
 package views;
 
-//import controller.QuanLyCachLyController;
+import controllers.QuanLyCachLyController;
 
 import javax.swing.JFrame;
 
@@ -22,9 +22,9 @@ public class CachLyJPanel extends javax.swing.JPanel {
     public CachLyJPanel(JFrame parentFrame) {
         this.parentFrame = parentFrame;
         initComponents();
-//        QuanLyCachLyController controller = new QuanLyCachLyController(jpnView, btnAdd, jtfSearch);
-//        controller.setDatetoTable2();
-//        controller.setEvent();
+        QuanLyCachLyController controller = new QuanLyCachLyController(jpnView, btnAdd, jtfSearch);
+        controller.setDatetoTable2();
+        controller.setEvent();
     }
 
     /**
