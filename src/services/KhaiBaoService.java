@@ -15,5 +15,5 @@ import models.KhaiBao;
 public interface KhaiBaoService {
     public List<KhaiBao> getList();
         public int createOrUpdate(KhaiBao khaiBao);
-    
+        public int delete(int id);
 }

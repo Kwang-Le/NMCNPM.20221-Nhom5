@@ -33,4 +33,8 @@ public class CachLyServiceImpl implements CachLyService{
         return cachLySQL.createOrUpdate(cachLy);
     
     }
+    @Override
+    public int delete(int id){
+        return cachLySQL.delete(id);
+    }
 }

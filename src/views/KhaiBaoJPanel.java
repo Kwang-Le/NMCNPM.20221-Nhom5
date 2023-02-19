@@ -21,7 +21,7 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
     public KhaiBaoJPanel(JFrame parentFrame) {
         this.parentFrame = parentFrame;
         initComponents();
-        QuanLyKhaiBaoController controller = new QuanLyKhaiBaoController(jpnView, btnAdd, jtfSearch);
+        QuanLyKhaiBaoController controller = new QuanLyKhaiBaoController(jpnView, btnAdd, jtfSearch, btnDelete);
         controller.setDatetoTable4();
         controller.setEvent();
     }
@@ -39,6 +39,7 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
         btnAdd = new javax.swing.JButton();
         jtfSearch = new javax.swing.JTextField();
         jpnView = new javax.swing.JPanel();
+        btnDelete = new javax.swing.JButton();
 
         jpnRoot.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -60,6 +61,9 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
             .addGap(0, 397, Short.MAX_VALUE)
         );
 
+        btnDelete.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btnDelete.setText("Xóa");
+
         javax.swing.GroupLayout jpnRootLayout = new javax.swing.GroupLayout(jpnRoot);
         jpnRoot.setLayout(jpnRootLayout);
         jpnRootLayout.setHorizontalGroup(
@@ -68,8 +72,10 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
                 .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpnRootLayout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addComponent(jtfSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 302, Short.MAX_VALUE)
+                        .addComponent(jtfSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
+                        .addGap(194, 194, 194)
+                        .addComponent(btnDelete)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jpnRootLayout.createSequentialGroup()
                         .addContainerGap()
@@ -82,7 +88,8 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(jpnRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAdd)
-                    .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDelete))
                 .addGap(27, 27, 27)
                 .addComponent(jpnView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -113,6 +120,7 @@ public class KhaiBaoJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnDelete;
     private javax.swing.JPanel jpnRoot;
     private javax.swing.JPanel jpnView;
     private javax.swing.JTextField jtfSearch;

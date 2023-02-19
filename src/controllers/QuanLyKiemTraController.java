@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.sql.Date;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -38,14 +39,17 @@ public class QuanLyKiemTraController {
     private JPanel jpnView;
     private JButton btnAdd;
     private JTextField jtfSearch;
+    private JButton btnDelete;
+    private KiemTra chosenKiemTraData= null;
     private KiemTraService kiemTraService = null;
     private String[] listColumn = {"ID Kiểm Tra", "ID Nhân Khẩu", "Họ và Tên", "Thời Điểm Kiểm Tra", "Hình Thức Kiểm Tra", "Kết Quả"};
     private TableRowSorter<TableModel> rowSorter = null;
 
-    public QuanLyKiemTraController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+    public QuanLyKiemTraController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch, JButton btnDelete) {
         this.jpnView = jpnView;
         this.btnAdd = btnAdd;
         this.jtfSearch = jtfSearch;
+        this.btnDelete = btnDelete;
         this.kiemTraService = new KiemTraServiceImpl();
     }
     public void setDatetoTable1(){
@@ -105,7 +109,19 @@ public class QuanLyKiemTraController {
                     frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
                 }
-
+                if(e.getClickCount() == 1 && table.getSelectedRow() != -1){
+                    DefaultTableModel model = (DefaultTableModel) table.getModel();
+                    int selectedRowIndex = table.getSelectedRow();
+                    selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
+                    KiemTra kiemTra = new KiemTra();
+                    kiemTra.setIDTest((int) model.getValueAt(selectedRowIndex, 0));
+                    kiemTra.setIDNhanKhau((int) model.getValueAt(selectedRowIndex, 1));
+                    kiemTra.setHoTen(model.getValueAt(selectedRowIndex, 2).toString());
+                    kiemTra.setThoiDiemTest((Date) model.getValueAt(selectedRowIndex, 3));
+                    kiemTra.setHinhThucTest(model.getValueAt(selectedRowIndex, 4).toString());
+                    kiemTra.setKetQua((String) model.getValueAt(selectedRowIndex, 5));
+                    chosenKiemTraData = kiemTra;
+                }
             }
             
         });
@@ -149,6 +165,29 @@ public class QuanLyKiemTraController {
             
             
         });
+        btnDelete.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (chosenKiemTraData != null) {
+                    if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa không?", "Xác nhận", JOptionPane.YES_NO_OPTION) == 0) {
+                        kiemTraService.delete(chosenKiemTraData.getIDTest());
+                    }
+                }
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                btnDelete.setBackground(new Color(0, 200, 83));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                btnDelete.setBackground(new Color(100, 221, 23));
+
+            }
+
+        });
+        
     }
     
 }

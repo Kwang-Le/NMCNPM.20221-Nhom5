@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.sql.Date;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -35,20 +36,25 @@ import views.QuanLyCovidManagerFrame.KhaiBaoJFrame;
  * @author admin
  */
 public class QuanLyKhaiBaoController {
+
     private JPanel jpnView;
     private JButton btnAdd;
     private JTextField jtfSearch;
+    private JButton btnDelete;
+    private KhaiBao chosenKhaiBaoData;
     private KhaiBaoService khaiBaoService = null;
     private String[] listColumn = {"ID Khai Báo", "ID Nhân Khẩu", "Vùng Dịch", "Biểu Hiện", "Ngày Khai Báo"};
     private TableRowSorter<TableModel> rowSorter = null;
 
-    public QuanLyKhaiBaoController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+    public QuanLyKhaiBaoController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch, JButton btnDelete) {
         this.jpnView = jpnView;
         this.btnAdd = btnAdd;
         this.jtfSearch = jtfSearch;
+        this.btnDelete = btnDelete;
         this.khaiBaoService = new KhaiBaoServiceImpl();
     }
-    public void setDatetoTable4(){
+
+    public void setDatetoTable4() {
         List<KhaiBao> listItem = khaiBaoService.getList();
         DefaultTableModel model = new ClassTableModel4().setTableKhaiBao(listItem, listColumn);
         JTable table = new JTable(model);
@@ -58,7 +64,7 @@ public class QuanLyKhaiBaoController {
             @Override
             public void insertUpdate(DocumentEvent e) {
                 String text = jtfSearch.getText();
-                if(text.trim().length() == 0 ){
+                if (text.trim().length() == 0) {
                     rowSorter.setRowFilter(null);
                 } else {
                     rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
@@ -67,8 +73,8 @@ public class QuanLyKhaiBaoController {
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                 String text = jtfSearch.getText();
-                if(text.trim().length() == 0 ){
+                String text = jtfSearch.getText();
+                if (text.trim().length() == 0) {
                     rowSorter.setRowFilter(null);
                 } else {
                     rowSorter.setRowFilter(RowFilter.regexFilter("(?i)" + text));
@@ -79,15 +85,15 @@ public class QuanLyKhaiBaoController {
             public void changedUpdate(DocumentEvent e) {
             }
         });
-        
+
         table.getColumnModel().getColumn(2).setMaxWidth(80);
         table.getColumnModel().getColumn(2).setMinWidth(80);
         table.getColumnModel().getColumn(2).setPreferredWidth(80);
-        
+
         table.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if(e.getClickCount() == 2 && table.getSelectedRow() != -1){
+                if (e.getClickCount() == 2 && table.getSelectedRow() != -1) {
                     DefaultTableModel model = (DefaultTableModel) table.getModel();
                     int selectedRowIndex = table.getSelectedRow();
                     selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
@@ -97,24 +103,36 @@ public class QuanLyKhaiBaoController {
                     khaiBao.setVungDich(model.getValueAt(selectedRowIndex, 2).toString());
                     khaiBao.setBieuHien((String) model.getValueAt(selectedRowIndex, 3));
                     khaiBao.setNgayKhaiBao((Date) model.getValueAt(selectedRowIndex, 4));
-                    
+
                     KhaiBaoJFrame frame = new KhaiBaoJFrame(khaiBao);
                     frame.setTitle("Thông Tin Khai Báo Covid");
                     frame.setResizable(false);
                     frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
                 }
+                if (e.getClickCount() == 1 && table.getSelectedRow() != -1) {
+                    DefaultTableModel model = (DefaultTableModel) table.getModel();
+                    int selectedRowIndex = table.getSelectedRow();
+                    selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
+                    KhaiBao khaiBao = new KhaiBao();
+                    khaiBao.setIDKhaiBao((int) model.getValueAt(selectedRowIndex, 0));
+                    khaiBao.setIDNhanKhau((int) model.getValueAt(selectedRowIndex, 1));
+                    khaiBao.setVungDich(model.getValueAt(selectedRowIndex, 2).toString());
+                    khaiBao.setBieuHien((String) model.getValueAt(selectedRowIndex, 3));
+                    khaiBao.setNgayKhaiBao((Date) model.getValueAt(selectedRowIndex, 4));
+                    chosenKhaiBaoData = khaiBao;
+                }
 
             }
-            
+
         });
-        
+
         table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 14));
         table.getTableHeader().setPreferredSize(new Dimension(100, 50));
         table.setRowHeight(50);
         table.validate();
         table.repaint();
-        
+
         JScrollPane scrollPane = new JScrollPane();
         scrollPane.getViewport().add(table);
         scrollPane.setPreferredSize(new Dimension(1350, 400));
@@ -124,15 +142,16 @@ public class QuanLyKhaiBaoController {
         jpnView.validate();
         jpnView.repaint();
     }
-        public void setEvent(){
+
+    public void setEvent() {
         btnAdd.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-            KhaiBaoJFrame frame = new KhaiBaoJFrame(new KhaiBao());
-            frame.setTitle("Thêm Mới Khai Báo");
-            frame.setResizable(false);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+                KhaiBaoJFrame frame = new KhaiBaoJFrame(new KhaiBao());
+                frame.setTitle("Thêm Mới Khai Báo");
+                frame.setResizable(false);
+                frame.setLocationRelativeTo(null);
+                frame.setVisible(true);
             }
 
             @Override
@@ -145,9 +164,30 @@ public class QuanLyKhaiBaoController {
                 btnAdd.setBackground(new Color(100, 221, 23));
 
             }
-            
-            
+
+        });
+        btnDelete.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (chosenKhaiBaoData != null) {
+                    if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa không?", "Xác nhận", JOptionPane.YES_NO_OPTION) == 0) {
+                        khaiBaoService.delete(chosenKhaiBaoData.getIDKhaiBao());
+                    }
+                }
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                btnDelete.setBackground(new Color(0, 200, 83));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                btnDelete.setBackground(new Color(100, 221, 23));
+
+            }
+
         });
     }
-    
+
 }

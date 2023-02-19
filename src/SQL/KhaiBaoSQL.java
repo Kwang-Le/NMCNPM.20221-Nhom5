@@ -12,4 +12,5 @@ import models.KiemTra;
 public interface KhaiBaoSQL {
     public List<KhaiBao> getList();
     public int createOrUpdate(KhaiBao khaiBao);
+    int delete(int id);
 }

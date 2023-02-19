@@ -33,4 +33,8 @@ public class KhaiBaoServiceImpl implements KhaiBaoService{
         return khaiBaoSQL.createOrUpdate(khaiBao);
     
     }
+    @Override
+    public int delete(int id){
+        return khaiBaoSQL.delete(id);
+    }
 }

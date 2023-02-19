@@ -48,7 +48,7 @@ public class KhaiBaoController {
         jtfIDNhanKhau.setText("#" + khaiBao.getIDNhanKhau());
         jtfVungDich.setText(khaiBao.getVungDich());
         jtaBieuHien.setText(khaiBao.getBieuHien());
-//        jdcNgayKhaiBao.setDate(khaiBao.getNgayKhaiBao());        
+        jdcNgayKhaiBao.setDate(khaiBao.getNgayKhaiBao());        
     }
     public void setEvent(){
         btnSubmit.addMouseListener(new MouseAdapter() {

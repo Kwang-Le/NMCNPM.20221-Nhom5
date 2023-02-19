@@ -14,6 +14,7 @@ import java.awt.event.MouseEvent;
 import java.sql.Date;
 import java.util.List;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -37,15 +38,18 @@ import views.QuanLyCovidManagerFrame.CachLyJFrame;
 public class QuanLyCachLyController {
     private JPanel jpnView;
     private JButton btnAdd;
+    private JButton btnDelete;
     private JTextField jtfSearch;
+    private CachLy chosenCachLyData = null;
     private CachLyService cachLyService = null;
     private String[] listColumn = {"ID Cách Ly", "ID Nhân Khẩu", "Họ và Tên", "Địa Điểm Cách Ly", "Cách Ly Từ", "Mức Độ Cách Ly", "Đã Kiểm Tra Hay Chưa"};
     private TableRowSorter<TableModel> rowSorter = null;
 
-    public QuanLyCachLyController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch) {
+    public QuanLyCachLyController(JPanel jpnView, JButton btnAdd, JTextField jtfSearch, JButton btnDelete) {
         this.jpnView = jpnView;
         this.btnAdd = btnAdd;
         this.jtfSearch = jtfSearch;
+        this.btnDelete = btnDelete;
         this.cachLyService = new CachLyServiceImpl();
     }
     public void setDatetoTable2(){
@@ -106,6 +110,20 @@ public class QuanLyCachLyController {
                     frame.setLocationRelativeTo(null);
                     frame.setVisible(true);
                 }
+                if(e.getClickCount() == 1 && table.getSelectedRow() != -1){
+                    DefaultTableModel model = (DefaultTableModel) table.getModel();
+                    int selectedRowIndex = table.getSelectedRow();
+                    selectedRowIndex = table.convertRowIndexToModel(selectedRowIndex);
+                    CachLy cachLy = new CachLy();
+                    cachLy.setIDCachLy((int) model.getValueAt(selectedRowIndex, 0));
+                    cachLy.setIDNhanKhau((int) model.getValueAt(selectedRowIndex, 1));
+                    cachLy.setHoTen(model.getValueAt(selectedRowIndex, 2).toString());
+                    cachLy.setNoiCachLy((String) model.getValueAt(selectedRowIndex, 3));
+                    cachLy.setThoiGianBatDau((Date) model.getValueAt(selectedRowIndex, 4));
+                    cachLy.setMucDoCachLy(model.getValueAt(selectedRowIndex, 5).toString());
+                    cachLy.setDaKiemTra((String) model.getValueAt(selectedRowIndex, 6));
+                    chosenCachLyData = cachLy;
+                }
 
             }
             
@@ -149,6 +167,28 @@ public class QuanLyCachLyController {
             }
             
             
+        });
+        btnDelete.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (chosenCachLyData != null) {
+                    if (JOptionPane.showConfirmDialog(null, "Bạn có muốn xóa không?", "Xác nhận", JOptionPane.YES_NO_OPTION) == 0) {
+                        cachLyService.delete(chosenCachLyData.getIDCachLy());
+                    }
+                }
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                btnDelete.setBackground(new Color(0, 200, 83));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                btnDelete.setBackground(new Color(100, 221, 23));
+
+            }
+
         });
     }
     

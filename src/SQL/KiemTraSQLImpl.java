@@ -53,6 +53,23 @@ public class KiemTraSQLImpl implements KiemTraSQL{
         return null;
     }
     
+    public int delete(int IDTest) {
+        try {
+            Connection cons = MysqlConnection.getMysqlConnection();
+            String sql = "DELETE FROM kiem_tra WHERE idTest=?";
+            PreparedStatement ps = cons.prepareStatement(sql);
+            ps.setInt(1, IDTest);
+            int deletedRows = ps.executeUpdate();
+            ps.close();
+            cons.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(KiemTraSQLImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
+    
     public int createOrUpdate(KiemTra kiemTra) {
         try {
             Connection cons = MysqlConnection.getMysqlConnection();

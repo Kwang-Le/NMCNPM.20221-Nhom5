@@ -33,4 +33,8 @@ public class KiemTraServiceImpl implements KiemTraService{
         return kiemTraSQL.createOrUpdate(kiemTra);
     
     }
+    @Override
+    public int delete(int id) {
+        return kiemTraSQL.delete(id);
+    }
 }

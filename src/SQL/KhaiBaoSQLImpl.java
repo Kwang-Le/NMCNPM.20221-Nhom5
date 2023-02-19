@@ -48,6 +48,24 @@ public class KhaiBaoSQLImpl implements KhaiBaoSQL {
         }
         return null;
     }
+    
+    @Override
+    public int delete(int id) {
+        try {
+            Connection cons = MysqlConnection.getMysqlConnection();
+            String sql = "DELETE FROM khai_bao WHERE idKhaiBao = ?";
+            PreparedStatement ps = cons.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            ps.close();
+            cons.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(KhaiBaoSQLImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
 
     @Override
     public int createOrUpdate(KhaiBao khaiBao) {

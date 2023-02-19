@@ -47,7 +47,7 @@ public class LoginUI extends javax.swing.JFrame {
                 dispose();
                 MainFrame mainFrame = new MainFrame();
                 mainFrame.setLocationRelativeTo(null);
-                mainFrame.setResizable(false);
+                mainFrame.setResizable(true);
                 mainFrame.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(rootPane, "Sai thong tin dang nhap", "Warning", JOptionPane.WARNING_MESSAGE);

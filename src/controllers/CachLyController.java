@@ -49,10 +49,10 @@ public class CachLyController {
 
     public void setView(CachLy cachLy){
         this.cachLy = cachLy;
-        jtfIDCachLy.setText("#" + cachLy.getIDCachLy());
-        jtfIDNhanKhau.setText("#" + cachLy.getIDNhanKhau());
+        jtfIDCachLy.setText(Integer.toString(cachLy.getIDCachLy()));
+        jtfIDNhanKhau.setText(Integer.toString(cachLy.getIDNhanKhau()));
         jtfHoTen.setText(cachLy.getHoTen());
-//        jdcThoiGianBatDau.setDate(cachLy.getThoiGianBatDau()); // vấn đề về thư viện j-calendar?
+        jdcThoiGianBatDau.setDate(cachLy.getThoiGianBatDau()); // vấn đề về thư viện j-calendar?
         jtfMucDoCachLy.setText(cachLy.getMucDoCachLy());
         jtaNoiCachLy.setText(cachLy.getNoiCachLy());
         jtfDaKiemTra.setText(cachLy.getDaKiemTra());
@@ -75,7 +75,7 @@ public class CachLyController {
                     int lastID = cachLyService.createOrUpdate(cachLy);
                     if (lastID > 0){
 //                    cachLy.setIDCachLy(lastID);
-                    jtfIDCachLy.setText("#" + lastID);
+                    jtfIDCachLy.setText("" + lastID);
                     jlbMsg.setText("Thêm Mới Dữ Liệu Thành Công");
                     }
                 }

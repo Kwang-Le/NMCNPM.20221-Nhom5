@@ -54,7 +54,7 @@ public class KiemTraController {
         jtfIDTest.setText("#" + kiemTra.getIDTest());
         jtfIDNhanKhau.setText("#" + kiemTra.getIDNhanKhau());
         jtfHoTen.setText(kiemTra.getHoTen());
-//        jdcThoiDiemTest.setDate(kiemTra.getThoiDiemTest());
+        jdcThoiDiemTest.setDate(kiemTra.getThoiDiemTest());
         jtfHinhThucTest.setText(kiemTra.getHinhThucTest());
         jtaKetQua.setText(kiemTra.getKetQua());
     }

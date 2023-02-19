@@ -15,5 +15,5 @@ import models.CachLy;
 public interface CachLyService {
     public List<CachLy> getList();
         public int createOrUpdate(CachLy cachLy);
-    
+        public int delete(int id);
 }

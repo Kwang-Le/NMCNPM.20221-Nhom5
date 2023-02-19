@@ -13,7 +13,8 @@ import models.CachLy;
  * @author admin
  */
 public interface CachLySQL {
-            public List<CachLy> getList();
+    public List<CachLy> getList();
     public int createOrUpdate(CachLy cachLy);
+    int delete(int id);
     
 }

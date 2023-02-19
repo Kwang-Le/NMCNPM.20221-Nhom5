@@ -44,7 +44,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                if (JOptionPane.showConfirmDialog(null, "Are you sure to close??", "Confirm", JOptionPane.YES_NO_OPTION) == 0) {
+                if (JOptionPane.showConfirmDialog(null, "Bạn có muốn tắt không?", "Xác nhận", JOptionPane.YES_NO_OPTION) == 0) {
                     dispose();
                 }
             }
@@ -92,6 +92,9 @@ public class MainFrame extends javax.swing.JFrame {
         jblTrangChu.setForeground(new java.awt.Color(255, 255, 255));
         jblTrangChu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/app.png"))); // NOI18N
         jblTrangChu.setText("   Trang chủ");
+        jblTrangChu.setMaximumSize(new java.awt.Dimension(142, 44));
+        jblTrangChu.setMinimumSize(new java.awt.Dimension(142, 44));
+        jblTrangChu.setPreferredSize(new java.awt.Dimension(142, 44));
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
@@ -99,15 +102,11 @@ public class MainFrame extends javax.swing.JFrame {
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jblTrangChu)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jblTrangChu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jblTrangChu)
-                .addGap(21, 21, 21))
+            .addComponent(jblTrangChu, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
         );
 
         NhanKhauBtn.setBackground(new java.awt.Color(132, 180, 203));
@@ -196,7 +195,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -214,6 +213,9 @@ public class MainFrame extends javax.swing.JFrame {
         jlbKhaiBao.setForeground(new java.awt.Color(255, 255, 255));
         jlbKhaiBao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-edit-property-32.png"))); // NOI18N
         jlbKhaiBao.setText("   Khai báo dịch tễ");
+        jlbKhaiBao.setMaximumSize(new java.awt.Dimension(195, 44));
+        jlbKhaiBao.setMinimumSize(new java.awt.Dimension(195, 44));
+        jlbKhaiBao.setPreferredSize(new java.awt.Dimension(195, 44));
 
         javax.swing.GroupLayout KhaiBaoBtnLayout = new javax.swing.GroupLayout(KhaiBaoBtn);
         KhaiBaoBtn.setLayout(KhaiBaoBtnLayout);
@@ -226,10 +228,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         KhaiBaoBtnLayout.setVerticalGroup(
             KhaiBaoBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KhaiBaoBtnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlbKhaiBao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jlbKhaiBao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         KiemTraBtn.setBackground(new java.awt.Color(132, 180, 203));
@@ -237,24 +236,23 @@ public class MainFrame extends javax.swing.JFrame {
 
         jlbKiemTra.setFont(new java.awt.Font("Montserrat", 1, 18)); // NOI18N
         jlbKiemTra.setForeground(new java.awt.Color(255, 255, 255));
-        jlbKiemTra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-antivirus-50.png"))); // NOI18N
+        jlbKiemTra.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/icons8-virus-free-32.png"))); // NOI18N
         jlbKiemTra.setText("   Test COVID-19");
+        jlbKiemTra.setMaximumSize(new java.awt.Dimension(179, 44));
+        jlbKiemTra.setMinimumSize(new java.awt.Dimension(179, 44));
+        jlbKiemTra.setPreferredSize(new java.awt.Dimension(179, 44));
 
         javax.swing.GroupLayout KiemTraBtnLayout = new javax.swing.GroupLayout(KiemTraBtn);
         KiemTraBtn.setLayout(KiemTraBtnLayout);
         KiemTraBtnLayout.setHorizontalGroup(
             KiemTraBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KiemTraBtnLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, KiemTraBtnLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlbKiemTra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jlbKiemTra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         KiemTraBtnLayout.setVerticalGroup(
             KiemTraBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(KiemTraBtnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlbKiemTra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jlbKiemTra, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         CachLyBtn.setBackground(new java.awt.Color(132, 180, 203));
@@ -271,15 +269,11 @@ public class MainFrame extends javax.swing.JFrame {
             CachLyBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CachLyBtnLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jlbCachLy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jlbCachLy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CachLyBtnLayout.setVerticalGroup(
             CachLyBtnLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CachLyBtnLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jlbCachLy, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jlbCachLy, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jpnMenuLayout = new javax.swing.GroupLayout(jpnMenu);
@@ -303,7 +297,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jpnMenuLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Home, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(NhanKhauBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -314,9 +308,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(KiemTraBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(CachLyBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ThongKeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jpnBean.setBackground(new java.awt.Color(167, 199, 231));

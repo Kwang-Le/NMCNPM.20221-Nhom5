@@ -53,6 +53,25 @@ public class CachLySQLImpl implements CachLySQL{
         return null;
     }
     
+    @Override
+    public int delete(int id) {
+        try {
+            Connection cons = MysqlConnection.getMysqlConnection();
+            String sql = "DELETE FROM cach_ly WHERE idCachLy = ?";
+            PreparedStatement ps = cons.prepareStatement(sql);
+            ps.setInt(1, id);
+            int rowsDeleted = ps.executeUpdate();
+            ps.close();
+            cons.close();
+            return rowsDeleted;
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(CachLySQLImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return 0;
+    }
+    
     public int createOrUpdate(CachLy cachLy) {
         try {
             Connection cons = MysqlConnection.getMysqlConnection();
