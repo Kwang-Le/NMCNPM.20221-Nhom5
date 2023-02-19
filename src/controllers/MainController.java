@@ -79,13 +79,13 @@ public class MainController {
             default:
                 break;
         }
-//        if (view == null) {
+        if (view != null) {
             root.removeAll();
             root.setLayout(new BorderLayout());
             root.add(view);
             root.validate();
             root.repaint();
-//        }
+        }
 
     }
 
@@ -165,7 +165,7 @@ public class MainController {
                 default:
                     break;
             }
-//            if(view == null){
+            if(view != null){
                 root.removeAll();
                 root.setLayout(new BorderLayout());
                 root.add(view);
@@ -174,7 +174,7 @@ public class MainController {
                 setDefaultColor();
                 jlbItem.setBackground(new Color(0));
                 jpnItem.setBackground(new Color(0));
-//            }
+            }
             
         }
 
