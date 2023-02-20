@@ -9,7 +9,7 @@ Với tình hình diễn biến phức tạp của dịch COVID-19, cán bộ y 
 - Dương Nhật Thành - 20205233
 
 # Tài liệu
-- [Báo cáo bài tập lớn](https://docs.google.com/document/d/1frgwEIa2ZMpp426keH1myk78rqlQ1YRgFslR3MXPqeQ/edit?usp=sharing)
+- [Báo cáo bài tập lớn](https://drive.google.com/file/d/1M5Pjyy23woUubjDuC1EbjbJvG0Trdi9b/view?usp=share_link)
 - [Slide báo cáo](https://docs.google.com/presentation/d/1lsMfM0uV95WRiQZvff8CmErXaT56-kcOVI1kctAj6ys/edit?usp=sharing)
 
 # Hướng dẫn
