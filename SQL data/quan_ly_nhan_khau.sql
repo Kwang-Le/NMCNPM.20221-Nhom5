@@ -7,6 +7,10 @@
 -- Phiên bản máy phục vụ: 10.4.8-MariaDB
 -- Phiên bản PHP: 7.3.11
 
+DROP DATABASE quan_ly_nhan_khau;
+CREATE DATABASE quan_ly_nhan_khau;
+USE quan_ly_nhan_khau;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -247,6 +251,12 @@ CREATE TABLE `cach_ly` (
     PRIMARY KEY (`idCachLy`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+INSERT INTO `cach_ly` (`idCachLy`, `idNhanKhau`, `hoTen`, `noiCachLy`, `thoiGianBatDau`, `mucDoCachLy`, `daKiemTra`) VALUES
+(1, 26, 'Trinh Văn An', 'quận Hai Bà Trưng, Hà Nội', '2019-12-08', 'F2', 'chưa'),
+(2, 28, 'Nguyễn Minh Quân', 'quận Hai Bà Trưng, Hà Nội', '2019-12-08', 'F1', 'chưa'),
+(3, 34, 'Nguyễn Minh Tuyết', 'quận Hai Bà Trưng, Hà Nội', '2019-12-08', 'F0', 'rồi'),
+(4, 26, 'Trinh Văn An', 'quận Hai Bà Trưng, Hà Nội', '2019-12-08', 'F0', 'rồi');
+
 -- --------------------------------------------------------
 
 --
@@ -263,6 +273,9 @@ CREATE TABLE `kiem_tra` (
     PRIMARY KEY (IDTest)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+INSERT INTO `kiem_tra` (`idTest`, `idNhanKhau`, `hoTen`, `thoiDiemTest`, `hinhThucTest`, `ketQua`) VALUES
+(1, 34, 'Nguyễn Minh Tuyết', '2019-12-08', 'PCR', 'dương tính'),
+(2, 26, 'Trinh Văn An', '2019-12-08', 'PCR', 'âm tính');
 -- --------------------------------------------------------
 
 --
@@ -277,6 +290,12 @@ CREATE TABLE `khai_bao` (
   `ngayKhaiBao` date DEFAULT NULL,
   PRIMARY KEY (`idkhaibao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `khai_bao` (`idkhaibao`, `idNhanKhau`, `vungDich`, `bieuHien`, `ngayKhaiBao`) VALUES
+(1, 26, 'quận Hai Bà Trưng, Hà Nội', 'ho', '2019-12-08'),
+(2, 28, 'quận Hai Bà Trưng, Hà Nội', 'sốt', '2019-12-08'),
+(3, 34, 'quận Hai Bà Trưng, Hà Nội', 'hắt xì', '2019-12-08'),
+(4, 26, 'quận Hai Bà Trưng, Hà Nội', 'sốt', '2019-12-08');
 -- --------------------------------------------------------
 
 --

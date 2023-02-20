@@ -9,7 +9,7 @@ import views.MainFrame;
  *
  * @author Hai
  */
-public class QuanLyNhanKhau {
+public class QuanLyCovid {
 
     public static Calendar calendar = Calendar.getInstance();
     
