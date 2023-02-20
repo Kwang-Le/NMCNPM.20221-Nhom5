@@ -18,7 +18,7 @@ public class KhaiBaoJFrame extends javax.swing.JFrame {
      */
     public KhaiBaoJFrame(KhaiBao khaiBao) {
         initComponents();
-        KhaiBaoController controller = new KhaiBaoController(jtfIDKhaiBao, jtfIDNhanKhau, jtfVungDich, jtaBieuHien, jdcNgayKhaiBao, btnSubmit);
+        KhaiBaoController controller = new KhaiBaoController(jtfIDKhaiBao, jtfIDNhanKhau, jtfVungDich, jtaBieuHien, jdcNgayKhaiBao, btnSubmit, jlbMsg);
         controller.setView(khaiBao);
         controller.setEvent();
     }
